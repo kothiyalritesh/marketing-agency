@@ -16,9 +16,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@supabase/ssr'],
-  },
+  // `serverComponentsExternalPackages` was moved to `serverExternalPackages`.
+  serverExternalPackages: ['@supabase/ssr'],
   async headers() {
     return [
       {
