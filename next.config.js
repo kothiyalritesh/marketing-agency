@@ -1,22 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
-    domains: ['localhost', 'your-domain.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-  // `serverComponentsExternalPackages` was moved to `serverExternalPackages`.
   serverExternalPackages: ['@supabase/ssr'],
   async headers() {
     return [

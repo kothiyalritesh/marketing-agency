@@ -27,6 +27,7 @@
     ],
     "paths": {
       "@/*": [
+        "./marketing-agency-website/*",
         "./*"
       ]
     }
